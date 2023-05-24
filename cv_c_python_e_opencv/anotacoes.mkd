@@ -1,0 +1,14 @@
+# Visão Computacional com Python e OpenCV
+
+## O que é visão computacional?
+
+- Ciência que estuda e desenvolve tecnologias que permitem que máquinas enxerguem e extraiam características de um meio/cena;
+- Abrange diversas áreas, entre elas: aprendizado de máquina, reconhecimento de padrões, matemática e processamento de imagens.
+- A visão computacional passa por várias fases:
+    - Aquisição;
+    - Processamento da imagem;
+    - Segmentação;
+    - Análise da imagem;
+    - Reconhecimento de padrões.
+
+prox aula: 8. 3.3. Transformações geométricas

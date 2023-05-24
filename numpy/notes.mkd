@@ -1,0 +1,27 @@
+# NumPy
+
+## What is NumPy?
+
+- NumPy is multidimensional array library
+- The main difference of using NumPy rather than lists is the speed of the code
+- Furthermore, NumPy has a lot more to offer than the default lists
+
+## Why is NumPy Faster?
+
+### Fixed Types
+- The main reason is because NumPy use fixed types
+- When using NumPy 1 byte numbers are going to be, by default, casted to int32 type (4 bytes). But the user can specify the size if needed (int16, int8)
+- By default, lists in Python consists of 4 different things (size, reference count, object type, object value)
+- Long story short, it's faster to read less bytes of memory
+
+### Contiguous Memory
+![Comparation between lists and Numpy memory allocation](./images/contiguousmemory.png "Contiguous memory allocation by NumPy")
+- Benefits:
+    - Memory is right next to each other (SIMD Vector Processing)
+    - Effective Cache Utilization
+
+## Applications of NumPy
+- Mathematics (MATLAB Replacement)
+- Plotting (Matplotlib)
+- Backend (Pandas, Connect 4, Digital Photography)
+- Machine Learning

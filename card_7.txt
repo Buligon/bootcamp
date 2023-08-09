@@ -1,0 +1,20 @@
+* vídeo começa com um exemplo muito engraçado do reconhecimento de imagens;
+- é uma ótima maneira de fazer o espectador se questionar sobre como esse reconhecimento é realizado;
+* O exemplo da identificação da pedra e pedaço de papel amassado por parte de carros autônomos também é extremamente válido;
+* "Pixels are just lifeless numbers. They do not carry meaning with themselfs.";
+* O exemplo de como as formas para um mesmo objeto (gato) variam também foi ótimo;
+* insight de treinar computadores como crianças
+
+* usar a internet em si como um grande banco de dados, assim fornecendo acesso a um número incontável de imagens;
+- big data para treinar algoritmos;
+* visão computacional não era uma área valorizada em 2007;
+* Algoritmos de rede neural convolucional;
+- 24 M nodes (VINTE E QUATRO M I L H Õ E S);
+* respostas seguras antes de chutar qual animal seja;
+- Ou seja, dados são divididos em classes, gato é um animal;
+* o trabalho de linguagem natural é simplesmente insano de se pensar para algo de 8 anos atrás
+- Até o sistema de leitura do texto é algo muito básico e robotizado na época
+
+Incrível de se pensar o trabalho que foi realizado na época, extremamente importante para a história da área.
+
+

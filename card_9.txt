@@ -1,0 +1,34 @@
+O que é:
+
+* Deep Learning é uma subárea do Aprendizado de Máquina (ML), que por sua vez é uma subárea da Inteligência Artificial;
+	- IA: possibilita máquinas simular o comportamento humano;
+	- ML: possibilita obter IAs por meio de algoritmos treinados com dados;
+	- DL: tipo de ML inspirado pela estrutura do cérebro (Artificial Neural Network).
+
+* Com DL as características são obtidas por meio da rede neural, sem intervenção humana. Já no ML, as características devem ser informadas previamente;
+* Sistema de camadas (layers), camadas são formadas por neurônios;
+	- Input Layer;
+	- Hidden Layers;
+	- Output Layer.
+* A informação passa de camada em camada por meio dos Connecting Channels;
+* Todos os neurônios tem um número único associado a eles chamado Bias;
+* O Bias é adicionado à weighted sum das entradas chegando ao neurônio, esta soma então é aplicada a uma função de ativação, a qual define se ele vai ser ativado ou não;
+* Se o neurônio é ativado, ele passa a informação adiante. Isso permanece até a penúltima camada;
+* Na última camada, o neurônio ativado corresponde ao digito de entrada;
+
+Aplicado em:
+
+* Atendimento ao cliente;
+* Medicina;
+* Carros autônomos;
+* Entre outros.
+
+Limitações:
+
+* Dados: necessita uma enorme quantia de dados para ser treinado;
+* Poder computacional: requer muito mais recurso;
+* Tempo de treinamento: requer horas ou até meses para ser treinado.
+
+Reposta da questão:
+B, A, D, C
+

@@ -1,0 +1,28 @@
+matriz one-hot
+
+    In machine learning and deep learning tasks, the one-hot encoding technique is commonly used to represent categorical variables numerically. One-hot encoding transforms categorical variables into a binary vector representation, where each category is represented by a binary value of 0 or 1.
+
+    Example:
+        Red [1, 0, 0]
+        Green [0, 1, 0]
+        Blue [0, 0, 1]
+
+Tensors
+
+    In TensorFlow, a tensor is a fundamental data structure used to represent multi-dimensional arrays or mathematical entities. Tensors are the primary data objects manipulated and processed within TensorFlow computations.
+
+    A tensor can be thought of as a container that holds numerical data, such as numbers, vectors, matrices, or higher-dimensional arrays. Tensors can have a fixed shape and data type, and they can be operated upon using various mathematical operations and transformations.
+
+    Here are some key characteristics of TensorFlow tensors:
+
+        Rank: The rank of a tensor refers to the number of dimensions it has. For example, a scalar value (single number) has rank 0, a vector has rank 1, a matrix has rank 2, and so on.
+
+        Shape: The shape of a tensor describes the size or dimensions of each of its axes. It defines the number of elements in each dimension. For example, a tensor with shape [3, 4] represents a 2-dimensional array with 3 rows and 4 columns.
+
+        Data Type: Tensors in TensorFlow have a specific data type, such as floating-point numbers (float32, float64), integers (int32, int64), or other specialized types. The data type determines the type of numerical values that can be stored in the tensor.
+
+        Immutability: Tensors in TensorFlow are immutable, meaning their values cannot be changed after creation. Instead, operations on tensors create new tensors as output.
+
+    TensorFlow tensors can be created using various methods, such as directly from arrays or lists of values, by performing operations on existing tensors, or by loading data from external sources. Once created, tensors can be used as inputs or outputs for mathematical operations, machine learning models, or other computations within TensorFlow.
+
+    Overall, tensors are a fundamental concept in TensorFlow, enabling the representation and manipulation of numerical data in a way that supports efficient computations and machine learning tasks.

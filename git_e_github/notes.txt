@@ -1,0 +1,42 @@
+git init # responsável por inicializar o repositório
+
+git status  # status do repositório
+git add <nome_arquivo>  # adicionar arquivo ao staged changes
+
+git commit -m "<mensagem>"  # commitar alterações 
+git commit -am "<mensagem>"  # commitar todos os arquivos modificados
+
+git log  # logs de commits
+git log --author="<nome>"  # filtra commits por autor
+git shortlog  # qtde por autor e msgs
+git shortlog -sn  # apenas qtde por autor
+git log --graph  # motra versões em forma gráfica
+
+git show <hash>  # mostra informações do commmit
+git diff  # mostra diferença nos arquivos antes de commitar
+git diff --name-only  # mostra só os nomes dos arquivos alterados
+
+git checkout <nome_arquivo>  # desfaz alterações no arquivo
+git reset HEAD <nome_arquivo>  # unstage o arquivo
+
+# ! <hash> é o commit para qual se deseja voltar. Ex.:
+# commit 2
+# commit 1
+# se eu desejo que as alterações do commit 2 sejam desfeitas eu uso a hash do commit 1
+git reset --soft <hash>  # volta o commit com as alterações em staged
+git reset --mixed <hash>  # volta o commit sem staged changes
+git reset --hard <hash>  # apaga o commit e tudo que foi feito nele
+
+git push -u origin master  # primeiro push
+git push <repositorio> <branch>
+
+git clone <endereco> <nome>  # clona repositórios meus
+
+git checkout -b <nome>  #  cria nova branch
+git branch  # mostra branches
+git checkout <nome>  #  troca de branch
+git branch -D <nome>  # apaga branch
+
+git merge <nome_branch> 
+
+git tag -a <versão> -m <mensagem>  # cria versões

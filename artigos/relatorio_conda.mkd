@@ -1,0 +1,39 @@
+# Conda 
+Conda é a ferramenta mais comum para criar ambientes virtuais e gerenciar pacotes para cientistas de dados usando python;
+Com conda você pode:
+	- Usar diferentes versões de pacotes para diferentes projetos;
+	- Experimentar as últimas versões dos pacotes;
+	- Utilizar a mesma versão Python e dos pacotes que seus colegas, assim tornando mais simples o compartilhamento de código.
+
+## Anaconda vs Miniconda
+
+Ambos dão acesso ao conda, além de vir com o pip e Python instalados.
+
+A diferença entre eles está que o Anaconda instala diversos pacotes e ferramentas Python amplamente utilizadas na área de data science. Já o Miniconda não.
+
+Tamanho de instalação:
+- Miniconda: 50-90 Mb
+- Anaconda: Min. 5GB
+
+## Conda commands
+
+```
+conda create -n <nome_ambiente> pandas jupyterlab  # cria ambiente com Python, pandas e jupyterlab
+conda create -n <nome_ambiente> python=3.8  # cria ambiente especificando versão Python
+
+conda create -n <nome_ambiente_clone> --clone <nome_ambiente>  # cria clone de um ambiente
+
+conda env list  # lista ambientes conda
+conda activate <nome_ambiente>  # ativa ambiente
+conda deactivate  # desativa ambiente atual
+conda env remove --name <nome_ambiente>  # deleta ambiente
+
+conda list  # apresenta os pacotes instalados no atual ambiente
+
+conda install pandas  # instala o pacote pandas
+conda install -c conda-forge pandas  # instala o pacote do canal conda-forge, onde apresenta as versões antes de elas irem para o canal principal
+conda update pandas
+conda update all
+conda uninstall pandas
+
+```

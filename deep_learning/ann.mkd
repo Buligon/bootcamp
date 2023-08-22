@@ -1,0 +1,18 @@
+# Artificial Neural Networks (ANNs)
+
+![Feedforward Neural Network](./notes_imgs/feedforward.png)
+- Because the signal just goes from left to right, we call it a "feedforward" neural network.
+
+1. The same inputs can be fed to multiple different neurons, each calculating something different (more neurons per layer); (more wide)
+2. Neurons in one layer can act as inputs to another layer. (more deep)
+
+- Each layer is the same equation, over and over again (so it's uniform)
+
+![Another way of thinking about neural networks](./notes_imgs/another_way_of_think.png)
+
+- Each layer learns incresingly complex features, so there was the necessity of making them more and more deep (deep learning)
+
+![Activation functions](./notes_imgs/activation_functions_last_layer.png)
+
+![Dropout layer](./notes_imgs/dropout_layer.png)
+- A way of making the algorithm do not depend of just one neuron is to use a dropout layer. It randomly deactivates a percentage of neurons per epoch, this way all of them will be trained.

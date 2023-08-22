@@ -1,0 +1,28 @@
+# Deep Learning
+
+## What is machine learning?
+Machine is learning is nothing but a geometry problem;
+
+### Regression 
+Basically means you are trying to fit a line or a curve - "Machine learning is just glorified curve-fitting"
+
+#### Real world example
+![Real world example of regression](./notes_imgs/real_world_example_regression.png)
+With more data features there are more dimensions. For example, if it was calculated with bachelor's degree in it, would be 3D (degree, years of experience, salary). It can be up to n dimensions and, obsviusly, can't be visualized past 3D.
+
+### Classification
+
+For example, image classification. Given an image (of a dog/cat), predict whether the image is of a dog/cat.
+
+### Long story short
+
+- Regression: 
+    - Predict a number;
+    - Make the line **as close to the data points as possible**;
+- Classification: 
+    - Predict a category / label;
+    - We use the line to **separate data points of different classification**;
+
+## Classification Theory
+![Decision rule](./notes_imgs/decicision_rule.png)
+In Deep Learning, a smoother version of it is preferable, by using differentiable functions ("sigmoid").

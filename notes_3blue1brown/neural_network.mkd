@@ -1,0 +1,58 @@
+# Neural Networks
+
+## Structure
+
+- Neuron: ~~thing that holds a number~~ a function;
+    - The number inside the neuron is called activation.
+- Layers are meant to be analogues to how biological neurons work;
+- The deeper the layer is the more complex patterns it identifies;
+
+    **Pixels** -> **Edges** -> **Patterns** -> **Digits**
+
+- The sigmoid function fits the result of the weights sum between 0 and 1
+
+![Representation of the sum, bias and sigmoid function](imgs/neuron_math.png)
+
+## Learning
+
+- The cost function take as input all the weights and its output is the cost value;
+- Adjust the weights it's only possible because of the gradient descent;
+- The cost function returns the average of all training data, so it minimizes the error of all samples.
+
+## Backpropagation
+
+- **The workhorse of how neural networks learn**
+- Backpropagation is an algorithm for computing the gradient;
+    - How a single training example would like to nudge all those weights and biases;
+- In the gradient vector, the magnitude of each component represents how sensible the cost function is to each weight and bias;
+
+![Ways of adjusting weights](imgs/adjusting_weights.png)
+- There's three ways of adjusting the final value:
+    - Increase b
+    - Increase W<sub>i</sub>
+    - Change a<sub>i</sub>
+
+## How everything is adjusted
+
+![Visualization of how the sum is made](imgs/value_visualization_origin.png)
+![Visualization of how the sum is made](imgs/value_visualization.png)
+![Chain rule](imgs/chain_rule.png)
+![Calculating the derivatives](imgs/calc_derivatives.png)
+    - Read it by: the derivative of ... is equals to ...
+
+So the chain rule turns to: 
+
+![Another way for expressing the chain rule](imgs/chain_rule_simplified.png)
+And then:
+
+![Chain rule being calc by the average](imgs/chain_rule_avg_calc.png)
+
+Additionally, it turns out to be just one part of the gradient vector:
+
+![Gradient vector](imgs/gradient_vector.png)
+
+## Author's Note
+
+Wrote based on: [Neural Networks](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)
+
+This was an awesome series of videos, such a good explanation of things, even calculus, my best worst enemy. Anyway, it was a great experience. 

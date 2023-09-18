@@ -1,0 +1,41 @@
+# Generators
+
+Para o desenvolvimento de CNN básicas, normalmente todo o conjunto de dados é carregado na memória. Entretanto, para conjuntos maiores, torna-se inviável manter tamanha espaço na memória ocupado, de maneira que se torna necessário uma nova abordagem para carregá-los.
+Para isso são utilizados generators, que fazem o “flow” dos dados do arquivo para serem carregados. Generators são funções que se comportam como um iterator e podem ser usadas em um loop. 
+
+## Exemeplo carregando os dados de um arquivo
+```
+def generate_arrays_from_file(path, batchsize):
+    inputs = []
+    targets = []
+    batchcount = 0
+    while True:
+        with open(path) as f:  # apelida o arquivo como f
+            for line in f:
+                x,y = line.split(',')
+                inputs.append(x)
+                targets.append(y)
+                batchcount += 1
+                if batchcount > batchsize:
+                  X = np.array(inputs, dtype='float32')
+                  y = np.array(targets, dtype='float32')
+                  yield (X, y)  # funciona como um return, porém sem perder o contexto da função
+                  inputs = []
+                  targets = []
+                  batchcount = 0
+```
+Essa função, posteriormente, é aplicada ao treinar os dados do modelo:
+```
+# Fit data to model
+model.fit(generate_arrays_from_file('./five_hundred.csv', batch_size),
+                    steps_per_epoch=num_rows / batch_size, epochs=10)
+```
+De modo que ela carrega os dados de forma progressiva, evitando a necessidade de ter todos eles na memória antes de poder iniciar o processamento. Além disso, a mesma técnica pode ser usada para os dados de validação:
+```
+# Fit data to model
+model.fit(generate_arrays_from_file('./five_hundred.csv', batch_size),
+                    steps_per_epoch=num_rows / batch_size, epochs=10, validation_data=generate_arrays_from_file('./five_hundred_validation_split.csv', batch_size), validation_steps=num_val_steps)
+```
+É importante ressaltar que, normalmente, o TensorFlow infere o número de validation steps (ou seja, quantos lotes de amostras são usados ​​para validação) automaticamente por meio da regra ```if None then len(validation_set)/batch_size```. No entanto, o comprimento do conjunto de validação não é conhecido antecipadamente, porque é gerado a partir de um arquivo. Então deve-se especificá-lo manualmente. Sendo necessário, portanto, adicionar manualmente um número de validation steps; o valor depende do comprimento do conjunto de validação. Se tiver um milhão de linhas, é melhor defini-lo como um milhão, por exemplo. ```num_val_steps = int(1e6/batch_size)```. Se o batch_size for 250, o número de etapas de validação seria 4.000.
+
+Artigo original disponível em: https://github.com/christianversloot/machine-learning-articles/blob/main/using-simple-generators-to-flow-data-from-file-with-keras.md
